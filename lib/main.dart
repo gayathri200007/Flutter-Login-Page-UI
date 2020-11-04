@@ -16,6 +16,9 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: false,
       body: Container(
+				child: SingleChildScrollView(
+				/**scrollDirection: Axis.vertical,**/
+				child: Container(
 				decoration: BoxDecoration(
 					image: DecorationImage(
 					image: AssetImage('assets/images/th.jpg'),
@@ -59,6 +62,7 @@ class HomePage extends StatelessWidget {
 	                        ]
 	                      ),
 	                      child: SingleChildScrollView(
+													scrollDirection: Axis.vertical,
 	                        child: Column(
 	                          children: <Widget>[
 	                            Container(
@@ -102,6 +106,36 @@ class HomePage extends StatelessWidget {
 																	decoration: InputDecoration(
 																			border: InputBorder.none,
 																			hintText: "Ingredients",
+																			hintStyle: TextStyle(color: Colors.grey[400])
+																	),
+																),
+															),
+															Container(
+																padding: EdgeInsets.all(8.0),
+																child: TextField(
+																	decoration: InputDecoration(
+																			border: InputBorder.none,
+																			hintText: "Time",
+																			hintStyle: TextStyle(color: Colors.grey[400])
+																	),
+																),
+															),
+															Container(
+																padding: EdgeInsets.all(8.0),
+																child: TextField(
+																	decoration: InputDecoration(
+																			border: InputBorder.none,
+																			hintText: "Time",
+																			hintStyle: TextStyle(color: Colors.grey[400])
+																	),
+																),
+															),
+															Container(
+																padding: EdgeInsets.all(8.0),
+																child: TextField(
+																	decoration: InputDecoration(
+																			border: InputBorder.none,
+																			hintText: "Time",
 																			hintStyle: TextStyle(color: Colors.grey[400])
 																	),
 																),
@@ -174,10 +208,11 @@ class HomePage extends StatelessWidget {
 	              )
 	            ],
 	          ),
-	        
+
 	      ),
-      	
+				)
       )
+			),
     );
   }
 }
